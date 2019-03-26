@@ -1,6 +1,6 @@
 # Manipulación de cadenas de caracteres :unicorn:
 ## 
-|| pipe sirve para concatenar
+|| pipe sirve para concatenar \n
 UPPER para convertir todo a mayuscula
 LOWER convierte todo a minuscula
 TRIM quita espacio en blanco de los expremos de la cadena
