@@ -1,6 +1,7 @@
 # Manipulación de cadenas de caracteres :unicorn:
-## 
-|| pipe sirve para concatenar \n
+
+```sql
+|| pipe sirve para concatenar 
 UPPER para convertir todo a mayuscula
 LOWER convierte todo a minuscula
 TRIM quita espacio en blanco de los expremos de la cadena
@@ -12,4 +13,4 @@ MANIPULACION DE FECHAS
 CURRENT_DATE fecha actual
 CURRENT_TIME hora actual
 CURRENT_TIMESTAMP fecha y hora actual 
-
+```
