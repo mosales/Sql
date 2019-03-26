@@ -1,7 +1,8 @@
 # Manipulación de cadenas de caracteres :unicorn:
-## || pipe sirve para concatenar
-UPPER para convertir todo a mayuscula
-LOWER convierte todo a minuscula
+## 
+###|| pipe sirve para concatenar
+####UPPER para convertir todo a mayuscula
+#####LOWER convierte todo a minuscula
 TRIM quita espacio en blanco de los expremos de la cadena
 LEADING quita espacios en blanco o especificos del inicio de la cadena
 TRAILING quita espacios en banco o especificos del final de la cadena
