@@ -1,3 +1,4 @@
+```sql
 --Mostrar todas las canciones que tengan genero 1 0 5
 SELECT "Name" From "Track" WHERE "GenreId" = 1 Or "GenreId"= 5;
 --Mostrar nombre y apellido de clientes que son del pais mexico y que fueron atendidos por empleado con identificador 4
@@ -15,7 +16,7 @@ SELECT "Country", "LastName", "FirstName"
 FROM "Customer" 
 WHERE  NOT ("Country" = 'Brazil');
 
---en que a�os nacieron mis empleados 
+--en que años nacieron mis empleados 
 SELECT "LastName","FirstName","BirthDate" FROM "Employee";
 
 --mostar empleados nacidos despues de 1955
@@ -31,13 +32,13 @@ WHERE "BirthDate">='1960-01-01'AND "BirthDate"<='1969-12-31';
 --Mostrar clientes
 SELECT * FROM "Customer";
 
---Mostar Clientes sin Compa�ia
+--Mostar Clientes sin Compañia
 SELECT "FirstName", "LastName", "Company" FROM "Customer" WHERE "Company" IS NULL;
 
---Mostrar Clientes que SI tienen una compa�ia asignada
+--Mostrar Clientes que SI tienen una compañia asignada
 SELECT "FirstName", "LastName", "Company" FROM "Customer" WHERE "Company" IS NOT NULL;
 
-----Mostrar Clientes que SI tienen una compa�ia asignada y la compa�ia tiene Inc.
+----Mostrar Clientes que SI tienen una compañia asignada y la compañia tiene Inc.
 SELECT "FirstName", "LastName", "Company" FROM "Customer" WHERE "Company" IS NOT NULL AND "Company" LIKE '%Inc.%';
 
 --Nombre de cancion y genero de aquellas canciones que tienen genero 1,3,5,7
@@ -55,4 +56,4 @@ SELECT "LastName","FirstName","BirthDate"
 FROM "Employee" 
 WHERE "BirthDate" BETWEEN '1960-01-01'AND '1969-12-31';
 
-
+´´´
