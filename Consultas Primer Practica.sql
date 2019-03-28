@@ -1,4 +1,4 @@
-```.sql
+```sql
 --Mostrar todas las canciones que tengan genero 1 0 5
 SELECT "Name" From "Track" WHERE "GenreId" = 1 Or "GenreId"= 5;
 --Mostrar nombre y apellido de clientes que son del pais mexico y que fueron atendidos por empleado con identificador 4
@@ -56,4 +56,4 @@ SELECT "LastName","FirstName","BirthDate"
 FROM "Employee" 
 WHERE "BirthDate" BETWEEN '1960-01-01'AND '1969-12-31';
 
-´´´
+```
