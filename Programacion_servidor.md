@@ -1,7 +1,6 @@
 # CREACIÓN DE FUNCIONES DEL LADO DEL SERVIDOR SQL :unicorn:
 
 ```sql
-
 CREATE FUNCTION prueba1 (INT, INT) RETURNS INT AS $$
 BEGIN
 		RETURN $1 * $2;
@@ -52,4 +51,69 @@ LANGUAGE plpgsql;
 DROP FUNCTION es_multiplo(int, int);
 
 SELECT es_multiplo(5,2);
+
+------
+CREATE OR REPLACE FUNCTION funcionCondicion (edad INT)
+RETURNS VARCHAR(20)
+AS
+$$
+DECLARE
+		clasificacion VARCHAR (20);
+BEGIN
+	  IF (edad >= 0 AND edad <= 3) THEN
+	  			clasificacion = 'bebe';
+	  ELSE
+	  		IF(edad >= 4 AND edad <= 10) THEN
+	  			clasificacion = 'niño';
+			END IF;
+		END IF;
+		
+		RETURN clasificacion;
+END 
+$$
+LANGUAGE plpgsql;
+
+SELECT funcionCondicion(4);
+---------------------------
+CREATE OR REPLACE FUNCTION funcionCondicion (clasificacion VARCHAR(50) )
+RETURNS VARCHAR(20)
+AS
+$$
+DECLARE
+		rango VARCHAR (20);
+BEGIN
+	  CASE clasificacion
+	  		WHEN 'bebe' THEN rango = 'tiene de 0 a 3 años';
+	  		WHEN 'niño' THEN rango = 'tiene de 4 a 10 años';
+			ELSE rango = 'tiene mas de 10 años';
+	  END CASE;
+		
+		RETURN rango;
+END 
+$$
+LANGUAGE plpgsql;
+
+SELECT funcionCondicion ('bebe');
+
+---------------------------------
+CREATE OR REPLACE FUNCTION funcionCiclo (numero INT)
+RETURNS BOOLEAN AS $$
+DECLARE 
+		cont INT := 0;
+		producto INT :=0;
+BEGIN
+	LOOP
+			EXIT WHEN cont=11;
+			SELECT numero * cont INTO producto;
+			raise notice 'Producto: %', producto;
+			cont = cont +1;
+	END LOOP;
+	
+	RETURN TRUE;
+END
+$$
+LANGUAGE plpgsql;
+
+SELECT funcionCiclo (10);
+
 ```
